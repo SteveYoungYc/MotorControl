@@ -1,0 +1,1400 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PE_PROJECT_SETTINGS_DOCUMENTATION>
+  <PE_product_version v="version 10.3 for Freescale Microcontrollers" />
+  <PE_core_version v="Processor Expert Version 0509" />
+  <CPU_Bean name="Cpu" type="56F8257">
+    <Enabled v="Y" />
+    <Properties>
+      <Component_name v="Cpu" />
+      <CPU_type v="MC56F8257" />
+      <group name="Clock settings">
+        <Oscillator_frequency__MHz_ v="8" />
+        <Master_clk__frequency__MHz_ v="0" />
+        <enumgroup name="Clock source" v="On-chip relaxation oscillator">
+          <EmptySection_DummyValue />
+        </enumgroup>
+      </group>
+      <Initialization_priority v="minimal priority" />
+      <Saturation_mode v="Disabled" />
+      <boolgroup name="Initialize shadow registers" v="no" />
+      <enumgroup name="Initialize unused I/O pins" v="No initialization">
+        <EmptySection_DummyValue />
+      </enumgroup>
+      <group name="Internal peripherals">
+        <group name="SIM module">
+          <Wait_disable_mode v="Enabled" />
+          <Stop_disable_mode v="Enabled" />
+          <OnCE_clock_to_core v="Enabled when core TAP is enabled" />
+          <CLKO_0_select v="Continuous system clock" />
+          <boolgroup name="CLKOUT_0 mode" v="Disabled" />
+          <CLKO_1_select v="Continuous system clock" />
+          <boolgroup name="CLKOUT_1 mode" v="Disabled" />
+        </group>
+        <boolgroup name="Flash security &amp;amp; protection" v="Disabled" />
+        <group name="Peripheral clocks">
+          <TA0_peripheral_clock v="Enabled" />
+          <TA0_peripheral_clock_in_stop_mode v="Disabled" />
+          <TA1_peripheral_clock v="Enabled" />
+          <TA1_peripheral_clock_in_stop_mode v="Disabled" />
+          <TA2_peripheral_clock v="Enabled" />
+          <TA2_peripheral_clock_in_stop_mode v="Disabled" />
+          <TA3_peripheral_clock v="Disabled" />
+          <TA3_peripheral_clock_in_stop_mode v="Disabled" />
+          <TB0_peripheral_clock v="Disabled" />
+          <TB0_peripheral_clock_in_stop_mode v="Disabled" />
+          <TB1_peripheral_clock v="Disabled" />
+          <TB1_peripheral_clock_in_stop_mode v="Disabled" />
+          <TB2_peripheral_clock v="Disabled" />
+          <TB2_peripheral_clock_in_stop_mode v="Disabled" />
+          <TB3_peripheral_clock v="Disabled" />
+          <TB3_peripheral_clock_in_stop_mode v="Disabled" />
+          <ADC_peripheral_clock v="Disabled" />
+          <ADC_peripheral_clock_in_stop_mode v="Disabled" />
+          <GPIOA_peripheral_clock v="Disabled" />
+          <GPIOA_peripheral_clock_in_stop_mode v="Disabled" />
+          <GPIOB_peripheral_clock v="Enabled" />
+          <GPIOB_peripheral_clock_in_stop_mode v="Disabled" />
+          <GPIOC_peripheral_clock v="Disabled" />
+          <GPIOC_peripheral_clock_in_stop_mode v="Disabled" />
+          <GPIOD_peripheral_clock v="Disabled" />
+          <GPIOD_peripheral_clock_in_stop_mode v="Disabled" />
+          <GPIOE_peripheral_clock v="Disabled" />
+          <GPIOE_peripheral_clock_in_stop_mode v="Disabled" />
+          <GPIOF_peripheral_clock v="Disabled" />
+          <GPIOF_peripheral_clock_in_stop_mode v="Disabled" />
+          <DAC_peripheral_clock v="Disabled" />
+          <DAC_peripheral_clock_in_stop_mode v="Disabled" />
+          <HSCMPA_peripheral_clock v="Disabled" />
+          <HSCMPA_peripheral_clock_in_stop_mode v="Disabled" />
+          <HSCMPB_peripheral_clock v="Disabled" />
+          <HSCMPB_peripheral_clock_in_stop_mode v="Disabled" />
+          <HSCMPC_peripheral_clock v="Disabled" />
+          <HSCMPC_peripheral_clock_in_stop_mode v="Disabled" />
+          <QSCI0_peripheral_clock v="Enabled" />
+          <QSCI0_peripheral_clock_in_stop_mode v="Disabled" />
+          <QSCI1_peripheral_clock v="Disabled" />
+          <QSCI1_peripheral_clock_in_stop_mode v="Disabled" />
+          <QSPI0_peripheral_clock v="Disabled" />
+          <QSPI0_peripheral_clock_in_stop_mode v="Disabled" />
+          <I2C0_peripheral_clock v="Disabled" />
+          <I2C0_peripheral_clock_in_stop_mode v="Disabled" />
+          <I2C1_peripheral_clock v="Disabled" />
+          <I2C1_peripheral_clock_in_stop_mode v="Disabled" />
+          <CRC_peripheral_clock v="Disabled" />
+          <CRC_peripheral_clock_in_stop_mode v="Disabled" />
+          <REFA_peripheral_clock v="Disabled" />
+          <REFA_peripheral_clock_in_stop_mode v="Disabled" />
+          <REFB_peripheral_clock v="Disabled" />
+          <REFB_peripheral_clock_in_stop_mode v="Disabled" />
+          <REFC_peripheral_clock v="Disabled" />
+          <REFC_peripheral_clock_in_stop_mode v="Disabled" />
+          <HFM_peripheral_clock v="Enabled" />
+          <MSCAN_peripheral_clock v="Enabled" />
+          <MSCAN_peripheral_clock_in_stop_mode v="Disabled" />
+          <PWM_Channel_0_peripheral_clock v="Enabled" />
+          <PWM_channel_0_peripheral_clock_in_stop_mode v="Disabled" />
+          <PWM_Channel_1_peripheral_clock v="Enabled" />
+          <PWM_channel_1_peripheral_clock_in_stop_mode v="Disabled" />
+          <PWM_Channel_2_peripheral_clock v="Enabled" />
+          <PWM_channel_2_peripheral_clock_in_stop_mode v="Disabled" />
+          <PWM_Channel_3_peripheral_clock v="Disabled" />
+          <PWM_channel_3_peripheral_clock_in_stop_mode v="Disabled" />
+        </group>
+        <group name="Peripheral clock rates">
+          <TMRA_clock_rate v="Auto select" />
+          <TMRB_clock_rate v="Auto select" />
+          <QSCI0_clock_rate v="Auto select" />
+          <QSCI1_clock_rate v="Auto select" />
+        </group>
+        <group name="I/O module">
+          <group name="GPIOA">
+            <Drive_strength_for_GPIOA0 v="Low" />
+            <Drive_strength_for_GPIOA1 v="Low" />
+            <Drive_strength_for_GPIOA2 v="Low" />
+            <Drive_strength_for_GPIOA3 v="Low" />
+            <Drive_strength_for_GPIOA4 v="Low" />
+            <Drive_strength_for_GPIOA5 v="Low" />
+            <Drive_strength_for_GPIOA6 v="Low" />
+            <Drive_strength_for_GPIOA7 v="Low" />
+          </group>
+          <group name="GPIOB">
+            <Drive_strength_for_GPIOB0 v="Low" />
+            <Drive_strength_for_GPIOB1 v="Low" />
+            <Drive_strength_for_GPIOB2 v="Low" />
+            <Drive_strength_for_GPIOB3 v="Low" />
+            <Drive_strength_for_GPIOB4 v="Low" />
+            <Drive_strength_for_GPIOB5 v="Low" />
+            <Drive_strength_for_GPIOB6 v="Low" />
+            <Drive_strength_for_GPIOB7 v="Low" />
+          </group>
+          <group name="GPIOC">
+            <group name="GPIOC_Low">
+              <Drive_strength_for_GPIOC0 v="Low" />
+              <Drive_strength_for_GPIOC1 v="Low" />
+              <Drive_strength_for_GPIOC2 v="Low" />
+              <Drive_strength_for_GPIOC3 v="Low" />
+              <Drive_strength_for_GPIOC4 v="Low" />
+              <Drive_strength_for_GPIOC5 v="Low" />
+              <Drive_strength_for_GPIOC6 v="Low" />
+              <Drive_strength_for_GPIOC7 v="Low" />
+            </group>
+            <group name="GPIOC_High">
+              <Drive_strength_for_GPIOC8 v="Low" />
+              <Drive_strength_for_GPIOC9 v="Low" />
+              <Drive_strength_for_GPIOC10 v="Low" />
+              <Drive_strength_for_GPIOC11 v="Low" />
+              <Drive_strength_for_GPIOC12 v="Low" />
+              <Drive_strength_for_GPIOC13 v="Low" />
+              <Drive_strength_for_GPIOC14 v="Low" />
+              <Drive_strength_for_GPIOC15 v="Low" />
+            </group>
+          </group>
+          <group name="GPIOD">
+            <Drive_strength_for_GPIOD0 v="Low" />
+            <Drive_strength_for_GPIOD1 v="Low" />
+            <Drive_strength_for_GPIOD2 v="Low" />
+            <Drive_strength_for_GPIOD3 v="Low" />
+            <Drive_strength_for_GPIOD4 v="Low" />
+          </group>
+          <group name="GPIOE">
+            <Drive_strength_for_GPIOE0 v="Low" />
+            <Drive_strength_for_GPIOE1 v="Low" />
+            <Drive_strength_for_GPIOE2 v="Low" />
+            <Drive_strength_for_GPIOE3 v="Low" />
+            <Drive_strength_for_GPIOE4 v="Low" />
+            <Drive_strength_for_GPIOE5 v="Low" />
+            <Drive_strength_for_GPIOE6 v="Low" />
+            <Drive_strength_for_GPIOE7 v="Low" />
+          </group>
+          <group name="GPIOF">
+            <group name="GPIOF_Low">
+              <Drive_strength_for_GPIOF0 v="Low" />
+              <Drive_strength_for_GPIOF1 v="Low" />
+              <Drive_strength_for_GPIOF2 v="Low" />
+              <Drive_strength_for_GPIOF3 v="Low" />
+              <Drive_strength_for_GPIOF4 v="Low" />
+              <Drive_strength_for_GPIOF5 v="Low" />
+              <Drive_strength_for_GPIOF6 v="Low" />
+              <Drive_strength_for_GPIOF7 v="Low" />
+            </group>
+            <group name="GPIOF_High">
+              <Drive_strength_for_GPIOF8 v="Low" />
+            </group>
+          </group>
+        </group>
+      </group>
+      <group name="CPU interrupts">
+        <boolgroup name="Interrupt SW0" v="Disabled" />
+        <boolgroup name="Interrupt SW1" v="Disabled" />
+        <boolgroup name="Interrupt SW2" v="Disabled" />
+        <boolgroup name="Interrupt SW3" v="Disabled" />
+        <boolgroup name="Interrupt LP" v="Disabled" />
+        <boolgroup name="Interrupt PLL" v="Disabled" />
+        <boolgroup name="Interrupt LVI" v="Disabled" />
+        <boolgroup name="Interrupt Illegal Instruction" v="Disabled" />
+        <boolgroup name="Interrupt Misalign Access" v="Disabled" />
+        <boolgroup name="Interrupt HW Stack Overflow" v="Disabled" />
+      </group>
+      <group name="Enabled speed modes">
+        <boolgroup name="High speed mode" v="Enabled">
+          <System_clock__IP_Bus_ v="60" />
+          <boolgroup name="PLL clock" v="Enabled">
+            <PLL_clock_frequency v="120" />
+            <Enable_PLL_after_reset v="yes" />
+          </boolgroup>
+        </boolgroup>
+        <boolgroup name="Low speed mode" v="Disabled" />
+        <boolgroup name="Slow speed mode" v="Disabled" />
+      </group>
+    </Properties>
+    <Methods>
+      <SetHighSpeed v="don&amp;apos;t generate code" />
+      <SetLowSpeed v="don&amp;apos;t generate code" />
+      <SetSlowSpeed v="don&amp;apos;t generate code" />
+      <GetSpeedMode v="don&amp;apos;t generate code" />
+      <EnableInt v="generate code" />
+      <DisableInt v="generate code" />
+      <GetResetSource v="don&amp;apos;t generate code" />
+      <SetWaitMode v="generate code" />
+      <SetStopMode v="generate code" />
+      <GetBusFreqHz v="don&amp;apos;t generate code" />
+      <OpenBackDoor v="don&amp;apos;t generate code" />
+      <InitShadowRegs v="don&amp;apos;t generate code" />
+      <Delay100US v="don&amp;apos;t generate code" />
+      <EnablePLL v="don&amp;apos;t generate code" />
+    </Methods>
+    <Events>
+      <Event_module_name v="Events" />
+      <event name="OnReset" v="don&amp;apos;t generate code" />
+      <event name="OnSwINT0" v="don&amp;apos;t generate code" />
+      <event name="OnSwINT1" v="don&amp;apos;t generate code" />
+      <event name="OnSwINT2" v="don&amp;apos;t generate code" />
+      <event name="OnSwINT3" v="don&amp;apos;t generate code" />
+      <event name="OnSwINTLP" v="don&amp;apos;t generate code" />
+      <event name="OnPLLError" v="don&amp;apos;t generate code" />
+      <event name="OnIllegalOpcode" v="don&amp;apos;t generate code" />
+      <event name="OnMisalignData" v="don&amp;apos;t generate code" />
+      <event name="OnHWStackError" v="don&amp;apos;t generate code" />
+      <event name="OnLVI21" v="don&amp;apos;t generate code" />
+      <event name="OnLVI27" v="don&amp;apos;t generate code" />
+    </Events>
+    <Compiler v="CodeWarrior DSP C Compiler" />
+    <CompilerProperties>
+      <Compiler v="CodeWarrior DSP C Compiler" />
+      <PESL_support v="yes" />
+      <Unhandled_interrupts v="One handler for all" />
+      <group name="User initialization">
+        <User_data_declarations>
+          <StrgList></StrgList>
+        </User_data_declarations>
+        <User_code_before_PE_initialization>
+          <StrgList></StrgList>
+        </User_code_before_PE_initialization>
+        <User_code_after_PE_initialization>
+          <StrgList></StrgList>
+        </User_code_after_PE_initialization>
+      </group>
+      <boolgroup name="Generate debugger files" v="yes">
+        <Generate_mem_file v="yes" />
+      </boolgroup>
+      <boolgroup name="Generate linker file" v="yes">
+        <pROM_xRAM_mode v="yes" />
+        <Stack_size v="512" />
+        <Heap_size v="256" />
+        <list name="ROM/RAM Areas" v="3">
+          <group name="MemoryArea0">
+            <boolgroup name="ROM/RAM Area" v="Enabled">
+              <Name v=".p_Interrupts" />
+              <Address v="0" />
+              <Size v="134" />
+              <Qualifier v="RWX" />
+            </boolgroup>
+          </group>
+          <group name="MemoryArea1">
+            <boolgroup name="ROM/RAM Area" v="Enabled">
+              <Name v=".p_Code" />
+              <Address v="134" />
+              <Size v="32634" />
+              <Qualifier v="RWX" />
+            </boolgroup>
+          </group>
+          <group name="MemoryArea2">
+            <boolgroup name="ROM/RAM Area" v="Enabled">
+              <Name v=".x_Data" />
+              <Address v="1" />
+              <Size v="4095" />
+              <Qualifier v="RW" />
+            </boolgroup>
+          </group>
+        </list>
+      </boolgroup>
+      <list name="System paths " v="0">
+        <EmptySection_DummyValue />
+      </list>
+      <list name="User paths " v="0">
+        <EmptySection_DummyValue />
+      </list>
+      <list name="Libraries" v="0">
+        <EmptySection_DummyValue />
+      </list>
+      <list name="User directories" v="0">
+        <EmptySection_DummyValue />
+      </list>
+    </CompilerProperties>
+  </CPU_Bean>
+  <Bean name="Bit1" type="BitIO">
+    <Enabled v="Y" />
+    <Properties>
+      <Component_name v="Bit1" />
+      <Pin_for_I_O v="GPIOB2_ANB2_VREFHB_CMPC_P2" />
+      <Pull_resistor sel_value="no pull resistor">
+        
+autoselected pull
+
+        <EmptySection_DummyValue />
+      </Pull_resistor>
+      <Open_drain v="push-pull" />
+      <Drive_strength_for_GPIOB2 v="Low" />
+      <Direction v="Output" />
+      <group name="Initialization">
+        <Init__direction v="Output" />
+        <Init__value v="0" />
+      </group>
+      <Safe_mode v="yes" />
+      <Optimization_for v="speed" />
+    </Properties>
+    <Methods>
+      <GetDir v="don&amp;apos;t generate code" />
+      <SetDir v="don&amp;apos;t generate code" />
+      <SetInput v="don&amp;apos;t generate code" />
+      <SetOutput v="don&amp;apos;t generate code" />
+      <GetVal v="generate code" />
+      <PutVal v="generate code" />
+      <ClrVal v="generate code" />
+      <SetVal v="generate code" />
+      <NegVal v="don&amp;apos;t generate code" />
+      <ConnectPin v="don&amp;apos;t generate code" />
+      <GetRawVal v="don&amp;apos;t generate code" />
+    </Methods>
+    <Events>
+      <EmptySection_DummyValue />
+    </Events>
+  </Bean>
+  <Bean name="Bit2" type="BitIO">
+    <Enabled v="Y" />
+    <Properties>
+      <Component_name v="Bit2" />
+      <Pin_for_I_O v="GPIOB3_ANB3_VREFLB_CMPC_M0" />
+      <Pull_resistor sel_value="no pull resistor">
+        
+autoselected pull
+
+        <EmptySection_DummyValue />
+      </Pull_resistor>
+      <Open_drain v="push-pull" />
+      <Drive_strength_for_GPIOB3 v="Low" />
+      <Direction v="Output" />
+      <group name="Initialization">
+        <Init__direction v="Output" />
+        <Init__value v="0" />
+      </group>
+      <Safe_mode v="yes" />
+      <Optimization_for v="speed" />
+    </Properties>
+    <Methods>
+      <GetDir v="don&amp;apos;t generate code" />
+      <SetDir v="don&amp;apos;t generate code" />
+      <SetInput v="don&amp;apos;t generate code" />
+      <SetOutput v="don&amp;apos;t generate code" />
+      <GetVal v="generate code" />
+      <PutVal v="generate code" />
+      <ClrVal v="generate code" />
+      <SetVal v="generate code" />
+      <NegVal v="don&amp;apos;t generate code" />
+      <ConnectPin v="don&amp;apos;t generate code" />
+      <GetRawVal v="don&amp;apos;t generate code" />
+    </Methods>
+    <Events>
+      <EmptySection_DummyValue />
+    </Events>
+  </Bean>
+  <Bean name="TI1" type="TimerInt">
+    <Enabled v="Y" />
+    <Properties>
+      <Component_name v="TI1" />
+      <Periodic_interrupt_source v="TMRA0_Compare" />
+      <Counter v="TMRA0" />
+      <boolgroup name="Interrupt service/event" v="Enabled">
+        <Interrupt v="INT_TMRA0" />
+        <Interrupt_priority v="medium priority" />
+        <Interrupt_preserve_registers v="yes" />
+      </boolgroup>
+      <Interrupt_period v="0.1 ms" />
+      <Same_period_in_modes v="yes" />
+      <Component_uses_entire_timer v="no" />
+      <group name="Initialization">
+        <Enabled_in_init__code v="yes" />
+        <Events_enabled_in_init_ v="yes" />
+      </group>
+      <group name="CPU clock/speed selection">
+        <High_speed_mode v="This component enabled" />
+        <Low_speed_mode v="This component disabled" />
+        <Slow_speed_mode v="This component disabled" />
+      </group>
+    </Properties>
+    <Methods>
+      <Enable v="generate code" />
+      <Disable v="generate code" />
+      <EnableEvent v="don&amp;apos;t generate code" />
+      <DisableEvent v="don&amp;apos;t generate code" />
+      <SetPeriodMode v="don&amp;apos;t generate code" />
+      <SetPeriodTicks16 v="don&amp;apos;t generate code" />
+      <SetPeriodTicks32 v="don&amp;apos;t generate code" />
+      <SetPeriodUS v="don&amp;apos;t generate code" />
+      <SetPeriodMS v="don&amp;apos;t generate code" />
+      <SetPeriodSec v="don&amp;apos;t generate code" />
+      <SetPeriodReal v="don&amp;apos;t generate code" />
+      <SetFreqHz v="don&amp;apos;t generate code" />
+      <SetFreqkHz v="don&amp;apos;t generate code" />
+      <SetFreqMHz v="don&amp;apos;t generate code" />
+    </Methods>
+    <Events>
+      <Event_module_name v="Events" />
+      <event name="BeforeNewSpeed" v="don&amp;apos;t generate code" />
+      <event name="AfterNewSpeed" v="don&amp;apos;t generate code" />
+      <event name="OnInterrupt" v="generate code">
+        <Event_procedure_name v="TI1_OnInterrupt" />
+        <Priority v="same as interrupt" />
+      </event>
+    </Events>
+  </Bean>
+  <Bean name="eFlexPWM" type="Init_eFlexPWM">
+    <Enabled v="Y" />
+    <Properties>
+      <Component_name v="eFlexPWM" />
+      <Device v="eFlexPWM" />
+      <group name="Settings">
+        <boolgroup name="Submodule 0" v="Enabled">
+          <Submodule_0_device v="eFlexPWM_SM0" />
+          <group name="Clock setting">
+            <PWM_clock_source v="IP Bus clock" />
+            <PWM_generator_clock v="Enabled" />
+            <PWM_prescaler v="1" />
+            <Module_clock v="60 MHz" />
+            <Init_counter_value v="35536" />
+            <PWM_value_0___half_cycle_point v="0" />
+            <PWM_value_1___counter_modulo v="29999" />
+            <Fractional_circuit_power_up v="Disabled" />
+            <Fractional_value_1_circuit v="Disabled" />
+            <Fractional_value_1 v="0" />
+            <Dead_time_value_0 v="0" />
+            <Dead_time_value_1 v="0" />
+            <PWM_frequency v="1.0000 kHz" />
+            <PWM_period v="1000.0000 us" />
+            <PWM_dead_time_0 v="0" />
+            <PWM_dead_time_1 v="0" />
+          </group>
+          <Enabled_in_Wait_mode v="no" />
+          <Enabled_in_Debug_mode v="no" />
+          <group name="Channel settings">
+            <Mode_of_PWM_ch_A_and_B v="Independent" />
+            <Complementary_PWM_source v="PWM23" />
+            <Double_switching v="Disabled" />
+            <group name="Channel A (PWM23)">
+              <group name="PWM function">
+                <PWM_value_2 v="0" />
+                <Fractional_value_2_and_3_circuit v="Disabled" />
+                <Fractional_value_2 v="0" />
+                <PWM_value_3 v="0" />
+                <Fractional_value_3 v="0" />
+                <SW_output v="Logic 0" />
+                <Deadtime_source v="Generated PWM" />
+                <Output_fault_state v="Forced to 0 prior to output polarity" />
+                <Output_polarity v="Not inverted" />
+                <Channel_masked v="no" />
+                <Channel_output v="Enabled" />
+                <group name="Fault channel 0">
+                  <Disable_by_fault_0 v="no" />
+                  <Disable_by_fault_1 v="no" />
+                  <Disable_by_fault_2 v="no" />
+                  <Disable_by_fault_3 v="no" />
+                </group>
+              </group>
+            </group>
+            <group name="Channel B (PWM45)">
+              <group name="PWM function">
+                <PWM_value_4 v="0" />
+                <Fractional_value_4_and_5_circuit v="Disabled" />
+                <Fractional_value_4 v="0" />
+                <PWM_value_5 v="0" />
+                <Fractional_value_5 v="0" />
+                <SW_output v="Logic 0" />
+                <Deadtime_source v="Generated PWM" />
+                <Output_fault_state v="Forced to 0 prior to output polarity" />
+                <Output_polarity v="Not inverted" />
+                <Channel_masked v="no" />
+                <Channel_output v="Enabled" />
+                <group name="Fault channel 0">
+                  <Disable_by_fault_0 v="no" />
+                  <Disable_by_fault_1 v="no" />
+                  <Disable_by_fault_2 v="no" />
+                  <Disable_by_fault_3 v="no" />
+                </group>
+              </group>
+            </group>
+            <group name="Channel X (PWM01)">
+              <group name="PWM function">
+                <Output_fault_state v="Forced to 0 prior to output polarity" />
+                <Output_polarity v="Not inverted" />
+                <Channel_masked v="no" />
+                <Channel_output v="Disabled" />
+                <group name="Fault channel 0">
+                  <Disable_by_fault_0 v="no" />
+                  <Disable_by_fault_1 v="no" />
+                  <Disable_by_fault_2 v="no" />
+                  <Disable_by_fault_3 v="no" />
+                </group>
+              </group>
+            </group>
+          </group>
+          <group name="Output trigger settings">
+            <group name="OUT_TRIG0 signal settings">
+              <Output_trigger_for_Val_0 v="Disabled" />
+              <Output_trigger_for_Val_2 v="Disabled" />
+              <Output_trigger_for_Val_4 v="Disabled" />
+            </group>
+            <group name="OUT_TRIG1 signal settings">
+              <Output_trigger_for_Val_1 v="Disabled" />
+              <Output_trigger_for_Val_3 v="Disabled" />
+              <Output_trigger_for_Val_5 v="Disabled" />
+            </group>
+          </group>
+          <group name="Reload settings">
+            <Reload_source v="Local reload signal" />
+            <Reload_frequency v="1" />
+            <Half_cycle_reload v="Disabled" />
+            <Full_cycle_reload v="Enabled" />
+            <Load_mode v="Load at next PWM reload if LDOK is set" />
+          </group>
+          <group name="Force and initialization settings">
+            <Initialization_source v="Local sync signal" />
+            <Force_initialization v="Disabled" />
+            <Force_source v="Local force signal" />
+            <Init_value_ch_A v="Low" />
+            <Init_value_ch_B v="Low" />
+            <Init_value_ch_X v="Low" />
+          </group>
+        </boolgroup>
+        <boolgroup name="Submodule 1" v="Enabled">
+          <Submodule_1_device v="eFlexPWM_SM1" />
+          <group name="Clock setting">
+            <PWM_clock_source v="Submodule 0&amp;apos;s clock" />
+            <PWM_generator_clock v="Enabled" />
+            <PWM_prescaler v="1" />
+            <Module_clock v="60 MHz" />
+            <Init_counter_value v="35536" />
+            <PWM_value_0___half_cycle_point v="0" />
+            <PWM_value_1___counter_modulo v="29999" />
+            <Fractional_circuit_power_up v="Disabled" />
+            <Fractional_value_1_circuit v="Disabled" />
+            <Fractional_value_1 v="0" />
+            <Dead_time_value_0 v="0" />
+            <Dead_time_value_1 v="0" />
+            <PWM_frequency v="1.0000 kHz" />
+            <PWM_period v="1000.0000 us" />
+            <PWM_dead_time_0 v="0" />
+            <PWM_dead_time_1 v="0" />
+          </group>
+          <Enabled_in_Wait_mode v="no" />
+          <Enabled_in_Debug_mode v="no" />
+          <group name="Channel settings">
+            <Mode_of_PWM_ch_A_and_B v="Independent" />
+            <Complementary_PWM_source v="PWM23" />
+            <Double_switching v="Disabled" />
+            <group name="Channel A (PWM23)">
+              <group name="PWM function">
+                <PWM_value_2 v="0" />
+                <Fractional_value_2_and_3_circuit v="Disabled" />
+                <Fractional_value_2 v="0" />
+                <PWM_value_3 v="0" />
+                <Fractional_value_3 v="0" />
+                <SW_output v="Logic 0" />
+                <Deadtime_source v="Generated PWM" />
+                <Output_fault_state v="Forced to 0 prior to output polarity" />
+                <Output_polarity v="Not inverted" />
+                <Channel_masked v="no" />
+                <Channel_output v="Enabled" />
+                <group name="Fault channel 0">
+                  <Disable_by_fault_0 v="no" />
+                  <Disable_by_fault_1 v="no" />
+                  <Disable_by_fault_2 v="no" />
+                  <Disable_by_fault_3 v="no" />
+                </group>
+              </group>
+            </group>
+            <group name="Channel B (PWM45)">
+              <group name="PWM function">
+                <PWM_value_4 v="0" />
+                <Fractional_value_4_and_5_circuit v="Disabled" />
+                <Fractional_value_4 v="0" />
+                <PWM_value_5 v="0" />
+                <Fractional_value_5 v="0" />
+                <SW_output v="Logic 0" />
+                <Deadtime_source v="Generated PWM" />
+                <Output_fault_state v="Forced to 0 prior to output polarity" />
+                <Output_polarity v="Not inverted" />
+                <Channel_masked v="no" />
+                <Channel_output v="Enabled" />
+                <group name="Fault channel 0">
+                  <Disable_by_fault_0 v="no" />
+                  <Disable_by_fault_1 v="no" />
+                  <Disable_by_fault_2 v="no" />
+                  <Disable_by_fault_3 v="no" />
+                </group>
+              </group>
+            </group>
+            <group name="Channel X (PWM01)">
+              <group name="PWM function">
+                <Output_fault_state v="Forced to 0 prior to output polarity" />
+                <Output_polarity v="Not inverted" />
+                <Channel_masked v="no" />
+                <Channel_output v="Disabled" />
+                <group name="Fault channel 0">
+                  <Disable_by_fault_0 v="no" />
+                  <Disable_by_fault_1 v="no" />
+                  <Disable_by_fault_2 v="no" />
+                  <Disable_by_fault_3 v="no" />
+                </group>
+              </group>
+            </group>
+          </group>
+          <group name="Output trigger settings">
+            <group name="OUT_TRIG0 signal settings">
+              <Output_trigger_for_Val_0 v="Disabled" />
+              <Output_trigger_for_Val_2 v="Disabled" />
+              <Output_trigger_for_Val_4 v="Disabled" />
+            </group>
+            <group name="OUT_TRIG1 signal settings">
+              <Output_trigger_for_Val_1 v="Disabled" />
+              <Output_trigger_for_Val_3 v="Disabled" />
+              <Output_trigger_for_Val_5 v="Disabled" />
+            </group>
+          </group>
+          <group name="Reload settings">
+            <Reload_source v="Master reload signal" />
+            <Reload_frequency v="1" />
+            <Half_cycle_reload v="Disabled" />
+            <Full_cycle_reload v="Enabled" />
+            <Load_mode v="Load at next PWM reload if LDOK is set" />
+          </group>
+          <group name="Force and initialization settings">
+            <Initialization_source v="Local sync signal" />
+            <Force_initialization v="Disabled" />
+            <Force_source v="Local force signal" />
+            <Init_value_ch_A v="Low" />
+            <Init_value_ch_B v="Low" />
+            <Init_value_ch_X v="Low" />
+          </group>
+        </boolgroup>
+        <boolgroup name="Submodule 2" v="Enabled">
+          <Submodule_2_device v="eFlexPWM_SM2" />
+          <group name="Clock setting">
+            <PWM_clock_source v="Submodule 0&amp;apos;s clock" />
+            <PWM_generator_clock v="Enabled" />
+            <PWM_prescaler v="1" />
+            <Module_clock v="60 MHz" />
+            <Init_counter_value v="35536" />
+            <PWM_value_0___half_cycle_point v="0" />
+            <PWM_value_1___counter_modulo v="29999" />
+            <Fractional_circuit_power_up v="Disabled" />
+            <Fractional_value_1_circuit v="Disabled" />
+            <Fractional_value_1 v="0" />
+            <Dead_time_value_0 v="0" />
+            <Dead_time_value_1 v="0" />
+            <PWM_frequency v="1.0000 kHz" />
+            <PWM_period v="1000.0000 us" />
+            <PWM_dead_time_0 v="0" />
+            <PWM_dead_time_1 v="0" />
+          </group>
+          <Enabled_in_Wait_mode v="no" />
+          <Enabled_in_Debug_mode v="no" />
+          <group name="Channel settings">
+            <Mode_of_PWM_ch_A_and_B v="Independent" />
+            <Complementary_PWM_source v="PWM23" />
+            <Double_switching v="Disabled" />
+            <group name="Channel A (PWM23)">
+              <group name="PWM function">
+                <PWM_value_2 v="0" />
+                <Fractional_value_2_and_3_circuit v="Disabled" />
+                <Fractional_value_2 v="0" />
+                <PWM_value_3 v="0" />
+                <Fractional_value_3 v="0" />
+                <SW_output v="Logic 0" />
+                <Deadtime_source v="Generated PWM" />
+                <Output_fault_state v="Forced to 0 prior to output polarity" />
+                <Output_polarity v="Not inverted" />
+                <Channel_masked v="no" />
+                <Channel_output v="Enabled" />
+                <group name="Fault channel 0">
+                  <Disable_by_fault_0 v="no" />
+                  <Disable_by_fault_1 v="no" />
+                  <Disable_by_fault_2 v="no" />
+                  <Disable_by_fault_3 v="no" />
+                </group>
+              </group>
+            </group>
+            <group name="Channel B (PWM45)">
+              <group name="PWM function">
+                <PWM_value_4 v="0" />
+                <Fractional_value_4_and_5_circuit v="Disabled" />
+                <Fractional_value_4 v="0" />
+                <PWM_value_5 v="0" />
+                <Fractional_value_5 v="0" />
+                <SW_output v="Logic 0" />
+                <Deadtime_source v="Generated PWM" />
+                <Output_fault_state v="Forced to 0 prior to output polarity" />
+                <Output_polarity v="Not inverted" />
+                <Channel_masked v="no" />
+                <Channel_output v="Enabled" />
+                <group name="Fault channel 0">
+                  <Disable_by_fault_0 v="no" />
+                  <Disable_by_fault_1 v="no" />
+                  <Disable_by_fault_2 v="no" />
+                  <Disable_by_fault_3 v="no" />
+                </group>
+              </group>
+            </group>
+            <group name="Channel X (PWM01)">
+              <group name="PWM function">
+                <Output_fault_state v="Forced to 0 prior to output polarity" />
+                <Output_polarity v="Not inverted" />
+                <Channel_masked v="no" />
+                <Channel_output v="Disabled" />
+                <group name="Fault channel 0">
+                  <Disable_by_fault_0 v="no" />
+                  <Disable_by_fault_1 v="no" />
+                  <Disable_by_fault_2 v="no" />
+                  <Disable_by_fault_3 v="no" />
+                </group>
+              </group>
+            </group>
+          </group>
+          <group name="Output trigger settings">
+            <group name="OUT_TRIG0 signal settings">
+              <Output_trigger_for_Val_0 v="Disabled" />
+              <Output_trigger_for_Val_2 v="Disabled" />
+              <Output_trigger_for_Val_4 v="Disabled" />
+            </group>
+            <group name="OUT_TRIG1 signal settings">
+              <Output_trigger_for_Val_1 v="Disabled" />
+              <Output_trigger_for_Val_3 v="Disabled" />
+              <Output_trigger_for_Val_5 v="Disabled" />
+            </group>
+          </group>
+          <group name="Reload settings">
+            <Reload_source v="Master reload signal" />
+            <Reload_frequency v="1" />
+            <Half_cycle_reload v="Disabled" />
+            <Full_cycle_reload v="Enabled" />
+            <Load_mode v="Load at next PWM reload if LDOK is set" />
+          </group>
+          <group name="Force and initialization settings">
+            <Initialization_source v="Local sync signal" />
+            <Force_initialization v="Disabled" />
+            <Force_source v="Local force signal" />
+            <Init_value_ch_A v="Low" />
+            <Init_value_ch_B v="Low" />
+            <Init_value_ch_X v="Low" />
+          </group>
+        </boolgroup>
+        <boolgroup name="Submodule 3" v="Disabled" />
+        <group name="Fault channel 0 protection settings">
+          <group name="Common fault settings">
+            <boolgroup name="Input filter" v="Disabled" />
+            <Fault_Glitch_Stretch v="Disabled" />
+          </group>
+          <group name="Fault 0">
+            <Fault_active_level v="Logic 0" />
+            <Fault_clearing_mode v="Automatic" />
+            <Fault_safety_mode v="Normal" />
+            <Full_cycle_recovery v="no" />
+          </group>
+          <group name="Fault 1">
+            <Fault_active_level v="Logic 0" />
+            <Fault_clearing_mode v="Automatic" />
+            <Fault_safety_mode v="Normal" />
+            <Full_cycle_recovery v="no" />
+          </group>
+          <group name="Fault 2">
+            <Fault_active_level v="Logic 0" />
+            <Fault_clearing_mode v="Automatic" />
+            <Fault_safety_mode v="Normal" />
+            <Full_cycle_recovery v="no" />
+          </group>
+          <group name="Fault 3">
+            <Fault_active_level v="Logic 0" />
+            <Fault_clearing_mode v="Automatic" />
+            <Fault_safety_mode v="Normal" />
+            <Full_cycle_recovery v="no" />
+          </group>
+        </group>
+      </group>
+      <group name="Pins">
+        <boolgroup name="SM0 pins" v="Enabled">
+          <group name="PWM/Input capture channels">
+            <boolgroup name="Channel A" v="Enabled">
+              <PWM_Input_capture_pin_A v="GPIOE1_PWM0A" />
+            </boolgroup>
+            <boolgroup name="Channel B" v="Enabled">
+              <PWM_Input_capture_pin_B v="GPIOE0_PWM0B" />
+            </boolgroup>
+            <boolgroup name="Channel X" v="Disabled" />
+          </group>
+          <boolgroup name="External control A - EXTA" v="Disabled" />
+          <boolgroup name="External synchronization" v="Disabled" />
+        </boolgroup>
+        <boolgroup name="SM1 pins" v="Enabled">
+          <group name="PWM/Input capture channels">
+            <boolgroup name="Channel A" v="Enabled">
+              <PWM_Input_capture_pin_A v="GPIOE3_PWM1A" />
+            </boolgroup>
+            <boolgroup name="Channel B" v="Enabled">
+              <PWM_Input_capture_pin_B v="GPIOE2_PWM1B" />
+            </boolgroup>
+            <boolgroup name="Channel X" v="Disabled" />
+          </group>
+          <boolgroup name="External control A - EXTA" v="Disabled" />
+          <boolgroup name="External synchronization" v="Disabled" />
+        </boolgroup>
+        <boolgroup name="SM2 pins" v="Enabled">
+          <group name="PWM/Input capture channels">
+            <boolgroup name="Channel A" v="Enabled">
+              <PWM_Input_capture_pin_A v="GPIOE5_PWM2A_XB_IN3" />
+            </boolgroup>
+            <boolgroup name="Channel B" v="Enabled">
+              <PWM_Input_capture_pin_B v="GPIOE4_PWM2B_XB_IN2" />
+            </boolgroup>
+            <boolgroup name="Channel X" v="Disabled" />
+          </group>
+          <boolgroup name="External control A - EXTA" v="Disabled" />
+          <boolgroup name="External synchronization" v="Disabled" />
+        </boolgroup>
+        <boolgroup name="SM3 pins" v="Disabled" />
+        <group name="PWM Faults">
+          <group name="Fault channel 0">
+            <boolgroup name="Fault 0" v="Disabled" />
+            <boolgroup name="Fault 1" v="Disabled" />
+            <boolgroup name="Fault 2" v="Disabled" />
+            <boolgroup name="Fault 3" v="Disabled" />
+          </group>
+        </group>
+        <group name="External clock">
+          <boolgroup name="External clock" v="Disabled" />
+          <External_clock_frequency v="1" />
+        </group>
+        <boolgroup name="External force" v="Disabled" />
+      </group>
+      <group name="Interrupts/DMA">
+        <boolgroup name="SM0 Interrupts/DMA" v="Enabled">
+          <group name="Compare interrupt">
+            <Interrupt v="INT_PWM_SubModule0_Compare" />
+            <Interrupt_priority v="medium priority" />
+            <ISR_Name v="" />
+            <Compare_interrupt_0 v="Disabled" />
+            <Compare_interrupt_1 v="Disabled" />
+            <Compare_interrupt_2 v="Disabled" />
+            <Compare_interrupt_3 v="Disabled" />
+            <Compare_interrupt_4 v="Disabled" />
+            <Compare_interrupt_5 v="Disabled" />
+          </group>
+          <group name="Reload interrupt">
+            <Interrupt v="INT_PWM_SubModule0_Reload" />
+            <Interrupt_priority v="1" />
+            <ISR_Name v="PWMC1_InterruptOnReload" />
+            <Reload_interrupt v="Enabled" />
+          </group>
+          <group name="Reload error interrupt">
+            <Interrupt v="INT_PWM_ReloadError" />
+            <Interrupt_priority v="medium priority" />
+            <ISR_Name v="" />
+            <SM0_reload_error_interrupt v="Disabled" />
+          </group>
+        </boolgroup>
+        <boolgroup name="SM1 Interrupts/DMA" v="Enabled">
+          <group name="Compare interrupt">
+            <Interrupt v="INT_PWM_SubModule1_Compare" />
+            <Interrupt_priority v="medium priority" />
+            <ISR_Name v="" />
+            <Compare_interrupt_0 v="Disabled" />
+            <Compare_interrupt_1 v="Disabled" />
+            <Compare_interrupt_2 v="Disabled" />
+            <Compare_interrupt_3 v="Disabled" />
+            <Compare_interrupt_4 v="Disabled" />
+            <Compare_interrupt_5 v="Disabled" />
+          </group>
+          <group name="Reload interrupt">
+            <Interrupt v="INT_PWM_SubModule1_Reload" />
+            <Interrupt_priority v="medium priority" />
+            <ISR_Name v="" />
+            <Reload_interrupt v="Disabled" />
+          </group>
+          <group name="Reload error interrupt">
+            <Interrupt v="INT_PWM_ReloadError" />
+            <Interrupt_priority v="medium priority" />
+            <ISR_Name v="" />
+            <SM1_reload_error_interrupt v="Disabled" />
+          </group>
+        </boolgroup>
+        <boolgroup name="SM2 Interrupts/DMA" v="Enabled">
+          <group name="Compare interrupt">
+            <Interrupt v="INT_PWM_SubModule2_Compare" />
+            <Interrupt_priority v="medium priority" />
+            <ISR_Name v="" />
+            <Compare_interrupt_0 v="Disabled" />
+            <Compare_interrupt_1 v="Disabled" />
+            <Compare_interrupt_2 v="Disabled" />
+            <Compare_interrupt_3 v="Disabled" />
+            <Compare_interrupt_4 v="Disabled" />
+            <Compare_interrupt_5 v="Disabled" />
+          </group>
+          <group name="Reload interrupt">
+            <Interrupt v="INT_PWM_SubModule2_Reload" />
+            <Interrupt_priority v="medium priority" />
+            <ISR_Name v="" />
+            <Reload_interrupt v="Disabled" />
+          </group>
+          <group name="Reload error interrupt">
+            <Interrupt v="INT_PWM_ReloadError" />
+            <Interrupt_priority v="medium priority" />
+            <ISR_Name v="" />
+            <SM2_reload_error_interrupt v="Disabled" />
+          </group>
+        </boolgroup>
+        <boolgroup name="SM3 Interrupts/DMA" v="Enabled">
+          <group name="Compare interrupt">
+            <Interrupt v="INT_PWM_SubModule3_Compare" />
+            <Interrupt_priority v="medium priority" />
+            <ISR_Name v="" />
+            <Compare_interrupt_0 v="Disabled" />
+            <Compare_interrupt_1 v="Disabled" />
+            <Compare_interrupt_2 v="Disabled" />
+            <Compare_interrupt_3 v="Disabled" />
+            <Compare_interrupt_4 v="Disabled" />
+            <Compare_interrupt_5 v="Disabled" />
+          </group>
+          <group name="Capture interrupt">
+            <Interrupt v="INT_PWM_SubModule3_InputCapture" />
+            <Interrupt_priority v="medium priority" />
+            <ISR_Name v="" />
+            <Capture_A_0_interrupt v="Disabled" />
+            <Capture_A_1_interrupt v="Disabled" />
+            <Capture_B_0_interrupt v="Disabled" />
+            <Capture_B_1_interrupt v="Disabled" />
+            <Capture_X_0_interrupt v="Disabled" />
+            <Capture_X_1_interrupt v="Disabled" />
+          </group>
+          <group name="Reload interrupt">
+            <Interrupt v="INT_PWM_SubModule3_Reload" />
+            <Interrupt_priority v="medium priority" />
+            <ISR_Name v="" />
+            <Reload_interrupt v="Disabled" />
+          </group>
+          <group name="Reload error interrupt">
+            <Interrupt v="INT_PWM_ReloadError" />
+            <Interrupt_priority v="medium priority" />
+            <ISR_Name v="" />
+            <SM3_reload_error_interrupt v="Disabled" />
+          </group>
+        </boolgroup>
+        <group name="Fault interrupt">
+          <Interrupt v="INT_PWM_Fault" />
+          <Interrupt_priority v="1" />
+          <ISR_Name v="PWMC1_InterruptOnFault" />
+          <Channel_0_fault_0_interrupt v="Enabled" />
+          <Channel_0_fault_1_interrupt v="Enabled" />
+          <Channel_0_fault_2_interrupt v="Enabled" />
+          <Channel_0_fault_3_interrupt v="Enabled" />
+        </group>
+      </group>
+      <group name="Initialization">
+        <Load_values_after_init_into_SM0 v="yes" />
+        <Load_values_after_init_into_SM1 v="yes" />
+        <Load_values_after_init_into_SM2 v="yes" />
+        <Load_values_after_init_into_SM3 v="no" />
+        <Enable_peripheral_clock_for_SM0 v="yes" />
+        <Enable_peripheral_clock_for_SM1 v="yes" />
+        <Enable_peripheral_clock_for_SM2 v="yes" />
+        <Enable_peripheral_clock_for_SM3 v="no" />
+        <Fault_channel_0_test v="No simulated fault" />
+        <group name="Fault flag clearing">
+          <Fault_channel_0_flag_0 v="Do not initialize" />
+          <Fault_channel_0_flag_1 v="Do not initialize" />
+          <Fault_channel_0_flag_2 v="Do not initialize" />
+          <Fault_channel_0_flag_3 v="Do not initialize" />
+        </group>
+        <Monitor_PLL_mode v="Do not monitor PLL" />
+        <Call_Init_method v="no" />
+      </group>
+    </Properties>
+    <Methods>
+      <Init v="generate code" />
+    </Methods>
+    <Events>
+      <EmptySection_DummyValue />
+    </Events>
+  </Bean>
+  <Bean name="Cap1" type="Capture">
+    <Enabled v="Y" />
+    <Properties>
+      <Component_name v="Cap1" />
+      <Capture_device v="TMRA0_Capture" />
+      <Counter v="TMRA0" />
+      <Capture_input_pin v="GPIOC3_TA0_CMPA_O_RXD0" />
+      <Counter_input v="0" />
+      <Pull_resistor v="pull up" />
+      <Edge v="both edges" />
+      <boolgroup name="Input filter" v="Disabled" />
+      <boolgroup name="Input source" v="external" />
+      <boolgroup name="Interrupt service/event" v="Enabled">
+        <Capture_interrupt v="INT_TMRA0" />
+        <Capture_priority v="medium priority" />
+        <Interrupt_preserve_registers v="yes" />
+      </boolgroup>
+      <Maximum_time_of_event v="100 ms" />
+      <group name="Initialization">
+        <Enabled_in_init__code v="yes" />
+        <Events_enabled_in_init_ v="yes" />
+      </group>
+      <group name="CPU clock/speed selection">
+        <High_speed_mode v="This component enabled" />
+        <Low_speed_mode v="This component disabled" />
+        <Slow_speed_mode v="This component disabled" />
+      </group>
+    </Properties>
+    <Methods>
+      <Enable v="generate code" />
+      <Disable v="generate code" />
+      <EnableEvent v="don&amp;apos;t generate code" />
+      <DisableEvent v="don&amp;apos;t generate code" />
+      <Reset v="generate code" />
+      <GetCaptureValue v="generate code" />
+      <GetStatus v="don&amp;apos;t generate code" />
+      <ConnectPin v="don&amp;apos;t generate code" />
+    </Methods>
+    <Events>
+      <Event_module_name v="Events" />
+      <event name="BeforeNewSpeed" v="don&amp;apos;t generate code" />
+      <event name="AfterNewSpeed" v="don&amp;apos;t generate code" />
+      <event name="OnCapture" v="generate code">
+        <Event_procedure_name v="Cap1_OnCapture" />
+        <Priority v="same as interrupt" />
+      </event>
+      <event name="OnOverflow" v="don&amp;apos;t generate code" />
+    </Events>
+  </Bean>
+  <Bean name="Cap2" type="Capture">
+    <Enabled v="Y" />
+    <Properties>
+      <Component_name v="Cap2" />
+      <Capture_device v="TMRA1_Capture" />
+      <Counter v="TMRA1" />
+      <Capture_input_pin v="GPIOC4_TA1_CMPB_O" />
+      <Counter_input v="1" />
+      <Pull_resistor sel_value="no pull resistor">
+        
+autoselected pull
+
+        <EmptySection_DummyValue />
+      </Pull_resistor>
+      <Edge v="both edges" />
+      <boolgroup name="Input filter" v="Disabled" />
+      <boolgroup name="Input source" v="external" />
+      <boolgroup name="Interrupt service/event" v="Enabled">
+        <Capture_interrupt v="INT_TMRA1" />
+        <Capture_priority v="medium priority" />
+        <Interrupt_preserve_registers v="yes" />
+      </boolgroup>
+      <Maximum_time_of_event v="100 ms" />
+      <group name="Initialization">
+        <Enabled_in_init__code v="yes" />
+        <Events_enabled_in_init_ v="yes" />
+      </group>
+      <group name="CPU clock/speed selection">
+        <High_speed_mode v="This component enabled" />
+        <Low_speed_mode v="This component disabled" />
+        <Slow_speed_mode v="This component disabled" />
+      </group>
+    </Properties>
+    <Methods>
+      <Enable v="don&amp;apos;t generate code" />
+      <Disable v="don&amp;apos;t generate code" />
+      <EnableEvent v="don&amp;apos;t generate code" />
+      <DisableEvent v="don&amp;apos;t generate code" />
+      <Reset v="generate code" />
+      <GetCaptureValue v="generate code" />
+      <GetStatus v="don&amp;apos;t generate code" />
+      <ConnectPin v="don&amp;apos;t generate code" />
+    </Methods>
+    <Events>
+      <Event_module_name v="Events" />
+      <event name="BeforeNewSpeed" v="don&amp;apos;t generate code" />
+      <event name="AfterNewSpeed" v="don&amp;apos;t generate code" />
+      <event name="OnCapture" v="generate code">
+        <Event_procedure_name v="Cap2_OnCapture" />
+        <Priority v="same as interrupt" />
+      </event>
+      <event name="OnOverflow" v="don&amp;apos;t generate code" />
+    </Events>
+  </Bean>
+  <Bean name="PWMC1" type="PWMMC">
+    <Enabled v="Y" />
+    <Properties>
+      <Component_name v="PWMC1" />
+      <Device v="eFlexPWM" />
+      <Align v="center-aligned mode" />
+      <Peripheral_initialization v="eFlexPWM" />
+      <Reload v="1" />
+      <Frequency_period v="1 kHz" />
+      <Output_Frequency v="1000 Hz" />
+      <Same_frequency_in_modes v="no" />
+      <Dead_time v="0 &amp;#181;s" />
+      <Dead_time_1 v="0 &amp;#181;s" />
+      <boolgroup name="Interrupt service/event" v="Enabled">
+        <Reload_interrupt_priority v="medium priority" />
+        <Interrupt_on_reload v="INT_PWM_SubModule0_Reload" />
+        <boolgroup name="Fault protection interrupts" v="Enabled">
+          <Interrupt_on_fault_0 v="INT_PWM_Fault" />
+          <Fault_0_interrupt_priority v="medium priority" />
+          <Interrupt_on_fault_1 v="INT_PWM_Fault" />
+          <Fault_1_interrupt_priority v="medium priority" />
+          <Interrupt_on_fault_2 v="INT_PWM_Fault" />
+          <Fault_2_interrupt_priority v="medium priority" />
+          <Interrupt_on_fault_3 v="INT_PWM_Fault" />
+          <Fault_3_interrupt_priority v="medium priority" />
+        </boolgroup>
+        <Interrupt_preserve_registers v="yes" />
+      </boolgroup>
+      <group name="Channel 0">
+        <Channel v="eFlexPWM_SM0_ChannelA" />
+        <PWM_pin v="GPIOE1_PWM0A" />
+      </group>
+      <boolgroup name="Channel 1" v="Enabled">
+        <Channel v="eFlexPWM_SM0_ChannelB" />
+        <PWM_pin v="GPIOE0_PWM0B" />
+      </boolgroup>
+      <boolgroup name="Channel 2" v="Enabled">
+        <Channel v="eFlexPWM_SM1_ChannelA" />
+        <PWM_pin v="GPIOE3_PWM1A" />
+      </boolgroup>
+      <boolgroup name="Channel 3" v="Enabled">
+        <Channel v="eFlexPWM_SM1_ChannelB" />
+        <PWM_pin v="GPIOE2_PWM1B" />
+      </boolgroup>
+      <boolgroup name="Channel 4" v="Enabled">
+        <Channel v="eFlexPWM_SM2_ChannelA" />
+        <PWM_pin v="GPIOE5_PWM2A_XB_IN3" />
+      </boolgroup>
+      <boolgroup name="Channel 5" v="Enabled">
+        <Channel v="eFlexPWM_SM2_ChannelB" />
+        <PWM_pin v="GPIOE4_PWM2B_XB_IN2" />
+      </boolgroup>
+      <enumgroup name="Fault protection" v="controlled by this component">
+        <boolgroup name="Fault 0" v="Enabled">
+          <Fault_clearing_mode v="automatic" />
+          <Fault_flag_clearing v="Do not initialize" />
+        </boolgroup>
+        <boolgroup name="Fault 1" v="Enabled">
+          <Fault_clearing_mode v="automatic" />
+          <Fault_flag_clearing v="Do not initialize" />
+        </boolgroup>
+        <boolgroup name="Fault 2" v="Enabled">
+          <Fault_clearing_mode v="automatic" />
+          <Fault_flag_clearing v="Do not initialize" />
+        </boolgroup>
+        <boolgroup name="Fault 3" v="Enabled">
+          <Fault_clearing_mode v="automatic" />
+          <Fault_flag_clearing v="Do not initialize" />
+        </boolgroup>
+      </enumgroup>
+      <group name="Initialization">
+        <Enabled_in_init__code v="yes" />
+        <Events_enabled_in_init_ v="yes" />
+      </group>
+      <group name="CPU clock/speed selection">
+        <High_speed_mode v="This component enabled" />
+        <Low_speed_mode v="This component disabled" />
+        <Slow_speed_mode v="This component disabled" />
+      </group>
+    </Properties>
+    <Methods>
+      <Enable v="don&amp;apos;t generate code" />
+      <Disable v="don&amp;apos;t generate code" />
+      <EnableEvent v="don&amp;apos;t generate code" />
+      <DisableEvent v="don&amp;apos;t generate code" />
+      <SetPeriod v="don&amp;apos;t generate code" />
+      <SetDuty v="generate code" />
+      <SetDutyPercent v="don&amp;apos;t generate code" />
+      <SetPrescaler v="don&amp;apos;t generate code" />
+      <Load v="generate code" />
+      <SetOutput v="don&amp;apos;t generate code" />
+      <SetRatio16 v="generate code" />
+      <SetRatio15 v="don&amp;apos;t generate code" />
+      <Swap v="don&amp;apos;t generate code" />
+      <Mask v="don&amp;apos;t generate code" />
+      <SwapAndMask v="don&amp;apos;t generate code" />
+      <OutputPadEnable v="generate code" />
+      <OutputPadDisable v="generate code" />
+      <ConnectPin v="don&amp;apos;t generate code" />
+      <ClearFaultFlag v="don&amp;apos;t generate code" />
+    </Methods>
+    <Events>
+      <Event_module_name v="Events" />
+      <event name="BeforeNewSpeed" v="don&amp;apos;t generate code" />
+      <event name="AfterNewSpeed" v="don&amp;apos;t generate code" />
+      <event name="OnReload" v="generate code">
+        <Event_procedure_name v="PWMC1_OnReload" />
+        <Priority v="same as interrupt" />
+      </event>
+      <event name="OnFault0" v="generate code">
+        <Event_procedure_name v="PWMC1_OnFault0" />
+        <Priority v="same as interrupt" />
+      </event>
+      <event name="OnFault1" v="generate code">
+        <Event_procedure_name v="PWMC1_OnFault1" />
+        <Priority v="same as interrupt" />
+      </event>
+      <event name="OnFault2" v="generate code">
+        <Event_procedure_name v="PWMC1_OnFault2" />
+        <Priority v="same as interrupt" />
+      </event>
+      <event name="OnFault3" v="generate code">
+        <Event_procedure_name v="PWMC1_OnFault3" />
+        <Priority v="same as interrupt" />
+      </event>
+    </Events>
+  </Bean>
+  <Bean name="Cap3" type="Capture">
+    <Enabled v="Y" />
+    <Properties>
+      <Component_name v="Cap3" />
+      <Capture_device v="TMRA2_Capture" />
+      <Counter v="TMRA2" />
+      <Capture_input_pin v="GPIOC6_TA2_XB_IN3_CMP_REF" />
+      <Counter_input v="3" />
+      <Pull_resistor sel_value="no pull resistor">
+        
+autoselected pull
+
+        <EmptySection_DummyValue />
+      </Pull_resistor>
+      <Edge v="both edges" />
+      <boolgroup name="Input filter" v="Disabled" />
+      <boolgroup name="Input source" v="external" />
+      <boolgroup name="Interrupt service/event" v="Enabled">
+        <Capture_interrupt v="INT_TMRA2" />
+        <Capture_priority v="medium priority" />
+        <Interrupt_preserve_registers v="yes" />
+      </boolgroup>
+      <Maximum_time_of_event v="100 ms" />
+      <group name="Initialization">
+        <Enabled_in_init__code v="yes" />
+        <Events_enabled_in_init_ v="yes" />
+      </group>
+      <group name="CPU clock/speed selection">
+        <High_speed_mode v="This component enabled" />
+        <Low_speed_mode v="This component disabled" />
+        <Slow_speed_mode v="This component disabled" />
+      </group>
+    </Properties>
+    <Methods>
+      <Enable v="generate code" />
+      <Disable v="generate code" />
+      <EnableEvent v="generate code" />
+      <DisableEvent v="don&amp;apos;t generate code" />
+      <Reset v="generate code" />
+      <GetCaptureValue v="generate code" />
+      <GetStatus v="don&amp;apos;t generate code" />
+      <ConnectPin v="don&amp;apos;t generate code" />
+    </Methods>
+    <Events>
+      <Event_module_name v="Events" />
+      <event name="BeforeNewSpeed" v="don&amp;apos;t generate code" />
+      <event name="AfterNewSpeed" v="don&amp;apos;t generate code" />
+      <event name="OnCapture" v="generate code">
+        <Event_procedure_name v="Cap3_OnCapture" />
+        <Priority v="same as interrupt" />
+      </event>
+      <event name="OnOverflow" v="generate code">
+        <Event_procedure_name v="Cap3_OnOverflow" />
+        <Priority v="same as interrupt" />
+      </event>
+    </Events>
+  </Bean>
+  <Bean name="FMSTR1" type="FreeMaster">
+    <Enabled v="Y" />
+    <Properties>
+      <Component_name v="FMSTR1" />
+      <Interrupt_mode v="Mixed interrupt and polling mode" />
+      <enumgroup name="Device" v="SCI">
+        <inhrbean type="Init_SCI">
+          <Enabled v="Y" />
+          <Template v="Init_SCI_56800" />
+          <Properties>
+            <Component_name v="QSCI0" />
+            <Device v="QSCI0" />
+            <group name="Settings">
+              <group name="Clock setting">
+                <Baud_rate_divisor v="390" />
+                <Fractional_baud_rate_divisor v="5" />
+                <SCI_baud_rate v="9600 Bd" />
+              </group>
+              <boolgroup name="Loop mode" v="Disabled" />
+              <LIN_slave_mode v="Disabled" />
+              <Data_format v="8 bits" />
+              <Wake_up v="by idle line" />
+              <Polarity v="normal" />
+              <Parity v="none" />
+              <SCI_in_Wait_mode v="Enabled" />
+              <Tx_FIFO_Watermark v="0" />
+              <Rx_FIFO_Watermark v="0" />
+              <FIFO_enable v="Disabled" />
+            </group>
+            <group name="Pins">
+              <RxD_pin v="GPIOF8_RXD0_TB1" />
+              <TxD_pin v="GPIOC2_TXD0_TB0_XB_IN2_CLKO0" />
+            </group>
+            <group name="Interrupts">
+              <group name="Receiver full">
+                <Interrupt v="INT_QSCI0_RxFull" />
+                <Receiver_full_interrupt v="Disabled" />
+                <Interrupt_priority v="medium priority" />
+                <ISR_name v="FMSTR1_Isr" />
+              </group>
+              <group name="Receiver error">
+                <Interrupt v="INT_QSCI0_RxError" />
+                <Receiver_error_interrupt v="Disabled" />
+                <Interrupt_priority v="medium priority" />
+                <ISR_name v="" />
+              </group>
+              <group name="Transmitter complete">
+                <Interrupt v="INT_QSCI0_TxIdle" />
+                <Transmitter_idle_interrupt v="Disabled" />
+                <Interrupt_priority v="medium priority" />
+                <ISR_name v="" />
+              </group>
+              <group name="Transmitter ready">
+                <Interrupt v="INT_QSCI0_TxEmpty" />
+                <Transmitter_empty_interrupt v="Disabled" />
+                <Interrupt_priority v="medium priority" />
+                <ISR_name v="FMSTR1_Isr" />
+              </group>
+            </group>
+            <group name="Initialization">
+              <Call_Init_method v="yes" />
+              <Enable_peripheral_clock v="yes" />
+              <Enable_SCI_Transmitter v="no" />
+              <Enable_SCI_Receiver v="no" />
+              <Receiver_wake_up_mode v="normal operation" />
+            </group>
+          </Properties>
+          <Methods>
+            <Init v="generate code" />
+          </Methods>
+          <Events>
+            <EmptySection_DummyValue />
+          </Events>
+        </inhrbean>
+      </enumgroup>
+      <boolgroup name="Oscilloscope" v="Disabled" />
+      <boolgroup name="Recorder" v="Disabled" />
+      <boolgroup name="Application command" v="Disabled" />
+      <boolgroup name="Target-side addressing" v="Disabled" />
+      <group name="Initialization">
+        <boolgroup name="Read/write memory commands" v="Enabled">
+          <Read_memory v="Enabled" />
+          <Write_memory v="Enabled" />
+          <Write_memory_bits v="Enabled" />
+        </boolgroup>
+        <boolgroup name="Read/write variable commands" v="Disabled" />
+        <Data_buffer_length v="15" />
+        <FIFO_receiver_queue_length v="32" />
+        <Interrupt_callback_function v="" />
+      </group>
+    </Properties>
+    <Methods>
+      <Poll v="generate code" />
+      <Recorder v="don&amp;apos;t generate code" />
+      <TriggerRec v="don&amp;apos;t generate code" />
+      <SetUpRecBuff v="don&amp;apos;t generate code" />
+      <GetAppCmd v="don&amp;apos;t generate code" />
+      <GetAppCmdData v="don&amp;apos;t generate code" />
+      <RegisterAppCmdCall v="don&amp;apos;t generate code" />
+      <AppCmdAck v="don&amp;apos;t generate code" />
+      <AppCmdSetResponseData v="don&amp;apos;t generate code" />
+    </Methods>
+    <Events>
+      <EmptySection_DummyValue />
+    </Events>
+  </Bean>
+</PE_PROJECT_SETTINGS_DOCUMENTATION>
+

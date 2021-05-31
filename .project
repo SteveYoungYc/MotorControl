@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<projectDescription>
+	<name>exp-the-motor</name>
+	<comment></comment>
+	<projects>
+	</projects>
+	<buildSpec>
+		<buildCommand>
+			<name>com.freescale.processorexpert.core.expertprojectbuilder</name>
+			<arguments>
+			</arguments>
+		</buildCommand>
+		<buildCommand>
+			<name>org.eclipse.cdt.managedbuilder.core.genmakebuilder</name>
+			<arguments>
+			</arguments>
+		</buildCommand>
+		<buildCommand>
+			<name>org.eclipse.cdt.managedbuilder.core.ScannerConfigBuilder</name>
+			<triggers>full,incremental,</triggers>
+			<arguments>
+			</arguments>
+		</buildCommand>
+	</buildSpec>
+	<natures>
+		<nature>com.freescale.processorexpert.core.expertprojectnature</nature>
+		<nature>org.eclipse.cdt.core.cnature</nature>
+		<nature>org.eclipse.cdt.managedbuilder.core.managedBuildNature</nature>
+		<nature>org.eclipse.cdt.managedbuilder.core.ScannerConfigNature</nature>
+	</natures>
+	<linkedResources>
+		<link>
+			<name>External_Modules</name>
+			<type>2</type>
+			<locationURI>virtual:/virtual</locationURI>
+		</link>
+		<link>
+			<name>External_Modules/MSCAN.c</name>
+			<type>1</type>
+			<location>D:/Software/CW MCU v10.6/MCU/ProcessorExpert/PESL/56800/56F82xx/MSCAN.c</location>
+		</link>
+		<link>
+			<name>External_Modules/MSCAN.h</name>
+			<type>1</type>
+			<location>D:/Software/CW MCU v10.6/MCU/ProcessorExpert/PESL/56800/56F82xx/MSCAN.h</location>
+		</link>
+	</linkedResources>
+</projectDescription>
