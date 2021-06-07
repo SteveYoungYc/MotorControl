@@ -51,10 +51,13 @@
 */
 /* Comment following line if the appropriate 'Interrupt preserve registers' property */
 /* is set to 'yes' (#pragma interrupt saveall is generated before the ISR)           */
+
+void MotorControl(void);
+
 #pragma interrupt called
 word a;
 int time, x = 0, o = 3000, f;
-long int d = 10000, D = 52428;
+float d = 10000, D = 52428;
 int C3, C4, C6;
 
 //things for overflowtime
@@ -67,8 +70,10 @@ unsigned int count[3];
 int e = 0, y = 0;
 float n, T, nSet = 2000, nRecord[2];
 PID_IncTypeDef PID;
-float speed[3] = {0.0f, 1000.0f, 2000.0f};
+float lastSpeed;
+float speed[3] = {2800.0f, 2000.0f, 1000.0f};
 int speedCount = 0;
+int isNSetStable = 0;
 
 void TI1_OnInterrupt(void)
 {
@@ -79,61 +84,7 @@ void TI1_OnInterrupt(void)
 	C4 = (int)((a & 0b0000000000010000) >> 4);
 	C6 = (int)((a & 0b0000000001000000) >> 6);
 
-	if (C3 == 1 && C4 == 1 && C6 == 0)
-	{
-		PWMC1_SetRatio16(0, 0);
-		PWMC1_SetRatio16(1, 0);
-		PWMC1_SetRatio16(2, 0);
-		PWMC1_SetRatio16(5, 0);
-		PWMC1_SetRatio16(3, D);
-		PWMC1_SetRatio16(4, d);
-	}
-	if (C3 == 1 && C4 == 0 && C6 == 0)
-	{
-		PWMC1_SetRatio16(0, 0);
-		PWMC1_SetRatio16(2, 0);
-		PWMC1_SetRatio16(3, 0);
-		PWMC1_SetRatio16(5, 0);
-		PWMC1_SetRatio16(4, d);
-		PWMC1_SetRatio16(1, D);
-	}
-	if (C3 == 1 && C4 == 0 && C6 == 1)
-	{
-		PWMC1_SetRatio16(0, 0);
-		PWMC1_SetRatio16(3, 0);
-		PWMC1_SetRatio16(4, 0);
-		PWMC1_SetRatio16(5, 0);
-		PWMC1_SetRatio16(2, d);
-		PWMC1_SetRatio16(1, D);
-	}
-	if (C3 == 0 && C4 == 0 && C6 == 1)
-	{
-		PWMC1_SetRatio16(0, 0);
-		PWMC1_SetRatio16(1, 0);
-		PWMC1_SetRatio16(3, 0);
-		PWMC1_SetRatio16(4, 0);
-		PWMC1_SetRatio16(2, d);
-		PWMC1_SetRatio16(5, D);
-	}
-	if (C3 == 0 && C4 == 1 && C6 == 1)
-	{
-		PWMC1_SetRatio16(1, 0);
-		PWMC1_SetRatio16(2, 0);
-		PWMC1_SetRatio16(3, 0);
-		PWMC1_SetRatio16(4, 0);
-		PWMC1_SetRatio16(0, d);
-		PWMC1_SetRatio16(5, D);
-	}
-	if (C3 == 0 && C4 == 1 && C6 == 0)
-	{
-		PWMC1_SetRatio16(1, 0);
-		PWMC1_SetRatio16(2, 0);
-		PWMC1_SetRatio16(4, 0);
-		PWMC1_SetRatio16(5, 0);
-		PWMC1_SetRatio16(0, d);
-		PWMC1_SetRatio16(3, D);
-	}
-	PWMC1_Load();
+	MotorControl();
 
 	//		if(x>=10000){d=d+3300;}
 	//        x=x+1;
@@ -144,6 +95,7 @@ void TI1_OnInterrupt(void)
 	//	C3=(int)((a&0b0000000000001000)>>3);
 	//	C4=(int)((a&0b0000000000010000)>>4);
 	//	C6=(int)((a&0b0000000001000000)>>6);
+	
 	if (C3 == 1 && C4 == 1 && C6 == 0)
 	{
 		PWMC1_SetRatio16(0, 0);
@@ -157,6 +109,7 @@ void TI1_OnInterrupt(void)
 	d = d + 3300;
 	if (d >= 20000)
 		d = 20000;
+	
 }
 
 /*
@@ -190,61 +143,7 @@ void Cap1_OnCapture(void)
 	C3 = (int)((a & 0b0000000000001000) >> 3);
 	C4 = (int)((a & 0b0000000000010000) >> 4);
 	C6 = (int)((a & 0b0000000001000000) >> 6);
-	if (C3 == 1 && C4 == 1 && C6 == 0)
-	{
-		PWMC1_SetRatio16(0, 0);
-		PWMC1_SetRatio16(1, 0);
-		PWMC1_SetRatio16(2, 0);
-		PWMC1_SetRatio16(5, 0);
-		PWMC1_SetRatio16(3, D);
-		PWMC1_SetRatio16(4, d);
-	}
-	if (C3 == 1 && C4 == 0 && C6 == 0)
-	{
-		PWMC1_SetRatio16(0, 0);
-		PWMC1_SetRatio16(2, 0);
-		PWMC1_SetRatio16(3, 0);
-		PWMC1_SetRatio16(5, 0);
-		PWMC1_SetRatio16(4, d);
-		PWMC1_SetRatio16(1, D);
-	}
-	if (C3 == 1 && C4 == 0 && C6 == 1)
-	{
-		PWMC1_SetRatio16(0, 0);
-		PWMC1_SetRatio16(3, 0);
-		PWMC1_SetRatio16(4, 0);
-		PWMC1_SetRatio16(5, 0);
-		PWMC1_SetRatio16(2, d);
-		PWMC1_SetRatio16(1, D);
-	}
-	if (C3 == 0 && C4 == 0 && C6 == 1)
-	{
-		PWMC1_SetRatio16(0, 0);
-		PWMC1_SetRatio16(1, 0);
-		PWMC1_SetRatio16(3, 0);
-		PWMC1_SetRatio16(4, 0);
-		PWMC1_SetRatio16(2, d);
-		PWMC1_SetRatio16(5, D);
-	}
-	if (C3 == 0 && C4 == 1 && C6 == 1)
-	{
-		PWMC1_SetRatio16(1, 0);
-		PWMC1_SetRatio16(2, 0);
-		PWMC1_SetRatio16(3, 0);
-		PWMC1_SetRatio16(4, 0);
-		PWMC1_SetRatio16(0, d);
-		PWMC1_SetRatio16(5, D);
-	}
-	if (C3 == 0 && C4 == 1 && C6 == 0)
-	{
-		PWMC1_SetRatio16(1, 0);
-		PWMC1_SetRatio16(2, 0);
-		PWMC1_SetRatio16(4, 0);
-		PWMC1_SetRatio16(5, 0);
-		PWMC1_SetRatio16(0, d);
-		PWMC1_SetRatio16(3, D);
-	}
-	PWMC1_Load();
+	MotorControl();
 }
 
 /*
@@ -395,7 +294,8 @@ void PWMC1_OnFault3(void)
 /* Comment following line if the appropriate 'Interrupt preserve registers' property */
 /* is set to 'yes' (#pragma interrupt saveall is generated before the ISR)           */
 #pragma interrupt called
-
+long int PIDOutput = 0;
+int flag = 0;
 void Cap3_OnCapture(void)
 {
 	f = 1;
@@ -405,61 +305,7 @@ void Cap3_OnCapture(void)
 	C3 = (int)((a & 0b0000000000001000) >> 3);
 	C4 = (int)((a & 0b0000000000010000) >> 4);
 	C6 = (int)((a & 0b0000000001000000) >> 6);
-	if (C3 == 1 && C4 == 1 && C6 == 0)
-	{
-		PWMC1_SetRatio16(0, 0);
-		PWMC1_SetRatio16(1, 0);
-		PWMC1_SetRatio16(2, 0);
-		PWMC1_SetRatio16(5, 0);
-		PWMC1_SetRatio16(3, D);
-		PWMC1_SetRatio16(4, d);
-	}
-	if (C3 == 1 && C4 == 0 && C6 == 0)
-	{
-		PWMC1_SetRatio16(0, 0);
-		PWMC1_SetRatio16(2, 0);
-		PWMC1_SetRatio16(3, 0);
-		PWMC1_SetRatio16(5, 0);
-		PWMC1_SetRatio16(4, d);
-		PWMC1_SetRatio16(1, D);
-	}
-	if (C3 == 1 && C4 == 0 && C6 == 1)
-	{
-		PWMC1_SetRatio16(0, 0);
-		PWMC1_SetRatio16(3, 0);
-		PWMC1_SetRatio16(4, 0);
-		PWMC1_SetRatio16(5, 0);
-		PWMC1_SetRatio16(2, d);
-		PWMC1_SetRatio16(1, D);
-	}
-	if (C3 == 0 && C4 == 0 && C6 == 1)
-	{
-		PWMC1_SetRatio16(0, 0);
-		PWMC1_SetRatio16(1, 0);
-		PWMC1_SetRatio16(3, 0);
-		PWMC1_SetRatio16(4, 0);
-		PWMC1_SetRatio16(2, d);
-		PWMC1_SetRatio16(5, D);
-	}
-	if (C3 == 0 && C4 == 1 && C6 == 1)
-	{
-		PWMC1_SetRatio16(1, 0);
-		PWMC1_SetRatio16(2, 0);
-		PWMC1_SetRatio16(3, 0);
-		PWMC1_SetRatio16(4, 0);
-		PWMC1_SetRatio16(0, d);
-		PWMC1_SetRatio16(5, D);
-	}
-	if (C3 == 0 && C4 == 1 && C6 == 0)
-	{
-		PWMC1_SetRatio16(1, 0);
-		PWMC1_SetRatio16(2, 0);
-		PWMC1_SetRatio16(4, 0);
-		PWMC1_SetRatio16(5, 0);
-		PWMC1_SetRatio16(0, d);
-		PWMC1_SetRatio16(3, D);
-	}
-	PWMC1_Load();
+	MotorControl();
 
 	//things for rad reading
 	count[0] = count[1];
@@ -475,6 +321,13 @@ void Cap3_OnCapture(void)
 	nRecord[0] = nRecord[1];
 	nRecord[1] = n;
 
+	PID.P = 50.0f;
+	PID.I = 100.0f;
+	PID.D = 5.0f;
+	PID.OutputMax = 40000;
+	PID.OutputMin = 100;
+	PID.IntegralMax = 20000;
+
 	if (nSet != 0)
 	{
 		if (fabs(nRecord[1] - nSet) > 0.7 * nSet)
@@ -482,27 +335,21 @@ void Cap3_OnCapture(void)
 			nRecord[1] = nRecord[0];
 		}
 		n = nRecord[1];
+		d = PID_Cal(&PID, n, nSet);
 	}
 	else
 	{
-		
+		d = 2000;
+		n = 0;
 	}
-	
 
 	if (index == 3)
 	{
 		index = 0;
 		overflowtime = 0;
 	}
-
-	PID.P = 10.0f;
-	PID.I = 1.0f;
-	PID.D = 5.0f;
-	PID.OutputMax = 40000;
-	PID.OutputMin = 10;
-	PID.IntegralMax = 20000;
-	//d += PID_Inc(nSet, n, &PID);
-	d = PID_Cal(&PID, n, nSet);
+	PIDOutput = PID_Cal(&PID, 0, nSet);
+	lastSpeed = nSet;
 	//	if(C3==0&&C4==1&&C6==1){y=y+1;Cap3_GetCaptureValue(&rreaderhelper);count[0]=rreaderhelper;}
 	//	if(y>=1){y=0;Cap3_GetCaptureValue(&rreaderhelper);
 	//		count[1]=rreaderhelper;
@@ -510,22 +357,6 @@ void Cap3_OnCapture(void)
 	//		overflowtime=0;}
 }
 
-/*
-** ===================================================================
-**     Event       :  Cap2_OnCapture (module Events)
-**
-**     Component   :  Cap2 [Capture]
-**     Description :
-**         This event is called on capturing of Timer/Counter actual
-**         value (only when the component is enabled - <Enable> and the
-**         events are enabled - <EnableEvent>.This event is available
-**         only if a <interrupt service/event> is enabled.
-**     Parameters  : None
-**     Returns     : Nothing
-** ===================================================================
-*/
-/* Comment following line if the appropriate 'Interrupt preserve registers' property */
-/* is set to 'yes' (#pragma interrupt saveall is generated before the ISR)           */
 #pragma interrupt called
 void Cap2_OnCapture(void)
 {
@@ -536,79 +367,9 @@ void Cap2_OnCapture(void)
 	C3 = (int)((a & 0b0000000000001000) >> 3);
 	C4 = (int)((a & 0b0000000000010000) >> 4);
 	C6 = (int)((a & 0b0000000001000000) >> 6);
-	if (C3 == 1 && C4 == 1 && C6 == 0)
-	{
-		PWMC1_SetRatio16(0, 0);
-		PWMC1_SetRatio16(1, 0);
-		PWMC1_SetRatio16(2, 0);
-		PWMC1_SetRatio16(5, 0);
-		PWMC1_SetRatio16(3, D);
-		PWMC1_SetRatio16(4, d);
-	}
-	if (C3 == 1 && C4 == 0 && C6 == 0)
-	{
-		PWMC1_SetRatio16(0, 0);
-		PWMC1_SetRatio16(2, 0);
-		PWMC1_SetRatio16(3, 0);
-		PWMC1_SetRatio16(5, 0);
-		PWMC1_SetRatio16(4, d);
-		PWMC1_SetRatio16(1, D);
-	}
-	if (C3 == 1 && C4 == 0 && C6 == 1)
-	{
-		PWMC1_SetRatio16(0, 0);
-		PWMC1_SetRatio16(3, 0);
-		PWMC1_SetRatio16(4, 0);
-		PWMC1_SetRatio16(5, 0);
-		PWMC1_SetRatio16(2, d);
-		PWMC1_SetRatio16(1, D);
-	}
-	if (C3 == 0 && C4 == 0 && C6 == 1)
-	{
-		PWMC1_SetRatio16(0, 0);
-		PWMC1_SetRatio16(1, 0);
-		PWMC1_SetRatio16(3, 0);
-		PWMC1_SetRatio16(4, 0);
-		PWMC1_SetRatio16(2, d);
-		PWMC1_SetRatio16(5, D);
-	}
-	if (C3 == 0 && C4 == 1 && C6 == 1)
-	{
-		PWMC1_SetRatio16(1, 0);
-		PWMC1_SetRatio16(2, 0);
-		PWMC1_SetRatio16(3, 0);
-		PWMC1_SetRatio16(4, 0);
-		PWMC1_SetRatio16(0, d);
-		PWMC1_SetRatio16(5, D);
-	}
-	if (C3 == 0 && C4 == 1 && C6 == 0)
-	{
-		PWMC1_SetRatio16(1, 0);
-		PWMC1_SetRatio16(2, 0);
-		PWMC1_SetRatio16(4, 0);
-		PWMC1_SetRatio16(5, 0);
-		PWMC1_SetRatio16(0, d);
-		PWMC1_SetRatio16(3, D);
-	}
-	PWMC1_Load();
+	MotorControl();
 }
 
-/*
-** ===================================================================
-**     Event       :  Cap3_OnOverflow (module Events)
-**
-**     Component   :  Cap3 [Capture]
-**     Description :
-**         This event is called if counter overflows (only when the
-**         component is enabled - <Enable> and the events are enabled -
-**         <EnableEvent>.This event is available only if a <interrupt
-**         service/event> is enabled.
-**     Parameters  : None
-**     Returns     : Nothing
-** ===================================================================
-*/
-/* Comment following line if the appropriate 'Interrupt preserve registers' property */
-/* is set to 'yes' (#pragma interrupt saveall is generated before the ISR)           */
 #pragma interrupt called
 void Cap3_OnOverflow(void)
 {
@@ -621,79 +382,9 @@ void Cap3_OnOverflow(void)
 	C3 = (int)((a & 0b0000000000001000) >> 3);
 	C4 = (int)((a & 0b0000000000010000) >> 4);
 	C6 = (int)((a & 0b0000000001000000) >> 6);
-	if (C3 == 1 && C4 == 1 && C6 == 0)
-	{
-		PWMC1_SetRatio16(0, 0);
-		PWMC1_SetRatio16(1, 0);
-		PWMC1_SetRatio16(2, 0);
-		PWMC1_SetRatio16(5, 0);
-		PWMC1_SetRatio16(3, D);
-		PWMC1_SetRatio16(4, d);
-	}
-	if (C3 == 1 && C4 == 0 && C6 == 0)
-	{
-		PWMC1_SetRatio16(0, 0);
-		PWMC1_SetRatio16(2, 0);
-		PWMC1_SetRatio16(3, 0);
-		PWMC1_SetRatio16(5, 0);
-		PWMC1_SetRatio16(4, d);
-		PWMC1_SetRatio16(1, D);
-	}
-	if (C3 == 1 && C4 == 0 && C6 == 1)
-	{
-		PWMC1_SetRatio16(0, 0);
-		PWMC1_SetRatio16(3, 0);
-		PWMC1_SetRatio16(4, 0);
-		PWMC1_SetRatio16(5, 0);
-		PWMC1_SetRatio16(2, d);
-		PWMC1_SetRatio16(1, D);
-	}
-	if (C3 == 0 && C4 == 0 && C6 == 1)
-	{
-		PWMC1_SetRatio16(0, 0);
-		PWMC1_SetRatio16(1, 0);
-		PWMC1_SetRatio16(3, 0);
-		PWMC1_SetRatio16(4, 0);
-		PWMC1_SetRatio16(2, d);
-		PWMC1_SetRatio16(5, D);
-	}
-	if (C3 == 0 && C4 == 1 && C6 == 1)
-	{
-		PWMC1_SetRatio16(1, 0);
-		PWMC1_SetRatio16(2, 0);
-		PWMC1_SetRatio16(3, 0);
-		PWMC1_SetRatio16(4, 0);
-		PWMC1_SetRatio16(0, d);
-		PWMC1_SetRatio16(5, D);
-	}
-	if (C3 == 0 && C4 == 1 && C6 == 0)
-	{
-		PWMC1_SetRatio16(1, 0);
-		PWMC1_SetRatio16(2, 0);
-		PWMC1_SetRatio16(4, 0);
-		PWMC1_SetRatio16(5, 0);
-		PWMC1_SetRatio16(0, d);
-		PWMC1_SetRatio16(3, D);
-	}
-	PWMC1_Load();
+	MotorControl();
 }
 
-/*
-** ===================================================================
-**     Event       :  TI2_OnInterrupt (module Events)
-**
-**     Component   :  TI2 [TimerInt]
-**     Description :
-**         When a timer interrupt occurs this event is called (only
-**         when the component is enabled - <Enable> and the events are
-**         enabled - <EnableEvent>). This event is enabled only if a
-**         <interrupt service/event> is enabled.
-**     Parameters  : None
-**     Returns     : Nothing
-** ===================================================================
-*/
-/* Comment following line if the appropriate 'Interrupt preserve registers' property */
-/* is set to 'yes' (#pragma interrupt saveall is generated before the ISR)           */
 #pragma interrupt called
 void TI2_OnInterrupt(void)
 {
@@ -703,6 +394,20 @@ void TI2_OnInterrupt(void)
 	{
 		speedCount = (speedCount + 1) % 3;
 		nSet = speed[speedCount];
+		//nSet = 2000;
+	}
+
+	
+	if (nSet != 0 && n == 0)
+	{
+		//n = 0.4 * nSet;
+		d = PID_Cal(&PID, 0, nSet);
+		flag = 1;
+	}
+
+	if(d < 0)
+	{
+		d = PID_Cal(&PID, 100, nSet);
 	}
 }
 
@@ -719,3 +424,62 @@ void TI2_OnInterrupt(void)
 **
 ** ###################################################################
 */
+
+void MotorControl()
+{
+	if (C3 == 1 && C4 == 1 && C6 == 0)
+	{
+		PWMC1_SetRatio16(0, 0);
+		PWMC1_SetRatio16(1, 0);
+		PWMC1_SetRatio16(2, 0);
+		PWMC1_SetRatio16(5, 0);
+		PWMC1_SetRatio16(3, D);
+		PWMC1_SetRatio16(4, d);
+	}
+	if (C3 == 1 && C4 == 0 && C6 == 0)
+	{
+		PWMC1_SetRatio16(0, 0);
+		PWMC1_SetRatio16(2, 0);
+		PWMC1_SetRatio16(3, 0);
+		PWMC1_SetRatio16(5, 0);
+		PWMC1_SetRatio16(4, d);
+		PWMC1_SetRatio16(1, D);
+	}
+	if (C3 == 1 && C4 == 0 && C6 == 1)
+	{
+		PWMC1_SetRatio16(0, 0);
+		PWMC1_SetRatio16(3, 0);
+		PWMC1_SetRatio16(4, 0);
+		PWMC1_SetRatio16(5, 0);
+		PWMC1_SetRatio16(2, d);
+		PWMC1_SetRatio16(1, D);
+	}
+	if (C3 == 0 && C4 == 0 && C6 == 1)
+	{
+		PWMC1_SetRatio16(0, 0);
+		PWMC1_SetRatio16(1, 0);
+		PWMC1_SetRatio16(3, 0);
+		PWMC1_SetRatio16(4, 0);
+		PWMC1_SetRatio16(2, d);
+		PWMC1_SetRatio16(5, D);
+	}
+	if (C3 == 0 && C4 == 1 && C6 == 1)
+	{
+		PWMC1_SetRatio16(1, 0);
+		PWMC1_SetRatio16(2, 0);
+		PWMC1_SetRatio16(3, 0);
+		PWMC1_SetRatio16(4, 0);
+		PWMC1_SetRatio16(0, d);
+		PWMC1_SetRatio16(5, D);
+	}
+	if (C3 == 0 && C4 == 1 && C6 == 0)
+	{
+		PWMC1_SetRatio16(1, 0);
+		PWMC1_SetRatio16(2, 0);
+		PWMC1_SetRatio16(4, 0);
+		PWMC1_SetRatio16(5, 0);
+		PWMC1_SetRatio16(0, d);
+		PWMC1_SetRatio16(3, D);
+	}
+	PWMC1_Load();
+}

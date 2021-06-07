@@ -4,7 +4,7 @@
     <Name>exp-the-motor</Name>
     <SavedBy>Yc</SavedBy>
     <ModificationStamp>45</ModificationStamp>
-    <Date>2021-05-31</Date>
+    <Date>2021-06-07</Date>
     <IDE>Eclipse IDE</IDE>
     <PEversion>1.9.0.RT6_b1411-0406</PEversion>
   </Header>
@@ -3998,11 +3998,11 @@
       </ItemState>
       <ItemState>
         <ItemSymbol>SM0_PWMFreq</ItemSymbol>
-        <Value>1.0000 kHz</Value>
+        <Value>0.9155 kHz</Value>
       </ItemState>
       <ItemState>
         <ItemSymbol>SM0_PWMPeriod</ItemSymbol>
-        <Value>1000.0000 us</Value>
+        <Value>1092.2833 us</Value>
       </ItemState>
       <ItemState>
         <ItemSymbol>SM0_PWMDeadTm0FeatureCondGroup</ItemSymbol>
@@ -4011,7 +4011,7 @@
       </ItemState>
       <ItemState>
         <ItemSymbol>SM0_PWMDeadTm0</ItemSymbol>
-        <Value>0</Value>
+        <Value>34.117 us</Value>
       </ItemState>
       <ItemState>
         <ItemSymbol>SM0_PWMDeadTm1FeatureCondGroup</ItemSymbol>
@@ -4020,7 +4020,7 @@
       </ItemState>
       <ItemState>
         <ItemSymbol>SM0_PWMDeadTm1</ItemSymbol>
-        <Value>0</Value>
+        <Value>34.117 us</Value>
       </ItemState>
       <ItemState>
         <ItemSymbol>SM0_WaitEn</ItemSymbol>
@@ -5315,11 +5315,11 @@
       </ItemState>
       <ItemState>
         <ItemSymbol>SM1_PWMFreq</ItemSymbol>
-        <Value>1.0000 kHz</Value>
+        <Value>0.9155 kHz</Value>
       </ItemState>
       <ItemState>
         <ItemSymbol>SM1_PWMPeriod</ItemSymbol>
-        <Value>1000.0000 us</Value>
+        <Value>1092.2833 us</Value>
       </ItemState>
       <ItemState>
         <ItemSymbol>SM1_PWMDeadTm0FeatureCondGroup</ItemSymbol>
@@ -5328,7 +5328,7 @@
       </ItemState>
       <ItemState>
         <ItemSymbol>SM1_PWMDeadTm0</ItemSymbol>
-        <Value>0</Value>
+        <Value>34.117 us</Value>
       </ItemState>
       <ItemState>
         <ItemSymbol>SM1_PWMDeadTm1FeatureCondGroup</ItemSymbol>
@@ -5337,7 +5337,7 @@
       </ItemState>
       <ItemState>
         <ItemSymbol>SM1_PWMDeadTm1</ItemSymbol>
-        <Value>0</Value>
+        <Value>34.117 us</Value>
       </ItemState>
       <ItemState>
         <ItemSymbol>SM1_WaitEn</ItemSymbol>
@@ -6632,11 +6632,11 @@
       </ItemState>
       <ItemState>
         <ItemSymbol>SM2_PWMFreq</ItemSymbol>
-        <Value>1.0000 kHz</Value>
+        <Value>0.9155 kHz</Value>
       </ItemState>
       <ItemState>
         <ItemSymbol>SM2_PWMPeriod</ItemSymbol>
-        <Value>1000.0000 us</Value>
+        <Value>1092.2833 us</Value>
       </ItemState>
       <ItemState>
         <ItemSymbol>SM2_PWMDeadTm0FeatureCondGroup</ItemSymbol>
@@ -6645,7 +6645,7 @@
       </ItemState>
       <ItemState>
         <ItemSymbol>SM2_PWMDeadTm0</ItemSymbol>
-        <Value>0</Value>
+        <Value>34.117 us</Value>
       </ItemState>
       <ItemState>
         <ItemSymbol>SM2_PWMDeadTm1FeatureCondGroup</ItemSymbol>
@@ -6654,7 +6654,7 @@
       </ItemState>
       <ItemState>
         <ItemSymbol>SM2_PWMDeadTm1</ItemSymbol>
-        <Value>0</Value>
+        <Value>34.117 us</Value>
       </ItemState>
       <ItemState>
         <ItemSymbol>SM2_WaitEn</ItemSymbol>

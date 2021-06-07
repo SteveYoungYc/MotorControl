@@ -225,7 +225,7 @@
     </GenFiles>
     <SignalListFile>Documentation\exp-the-motor_SIGNALS.txt</SignalListFile>
     <DestinationCompiler>MetrowerksDSP</DestinationCompiler>
-    <ProjectModificationStamp>45</ProjectModificationStamp>
+    <ProjectModificationStamp>46</ProjectModificationStamp>
   </Options>
   <CpuID_2>
     <Generated>true</Generated>

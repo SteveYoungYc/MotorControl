@@ -29,7 +29,7 @@
       <File Name="Generated_Code/PE_Error.h" FileDate="2021-03-22, 15:42:52" FileAge="1616398972635" FileType="45637" />
       <File Name="Generated_Code/freemaster_cfg.h" FileDate="2021-05-17, 15:47:12" FileAge="1621237632946" FileType="45637" CompNumb="34" />
       <File Name="Generated_Code/dfr16priv.h" FileDate="2021-03-22, 16:03:31" FileAge="1616400211810" FileType="45637" />
-      <File Name="Documentation/exp-the-motor_SIGNALS.txt" FileDate="2021-05-31, 16:21:38" FileAge="1622449298651" FileType="3072" />
+      <File Name="Documentation/exp-the-motor_SIGNALS.txt" FileDate="2021-06-07, 14:11:51" FileAge="1623046311111" FileType="3072" />
       <File Name="Project_Settings/Startup_Code/56F80xx_init.asm" FileDate="2021-03-22, 15:42:52" FileAge="1616398972557" FileType="16384" CompNumb="2" />
       <File Name="Documentation/exp-the-motor_Settings.xml" FileDate="2021-05-31, 16:21:38" FileAge="1622449298665" FileType="3072" />
       <File Name="Generated_Code/Vectors.c" FileDate="2021-05-31, 16:21:38" FileAge="1622449298617" FileType="45637" CompNumb="2" />
@@ -62,7 +62,7 @@
       <File Name="Sources/Events.h" FileDate="2021-05-31, 16:21:38" FileAge="1622449298620" FileType="131328" />
       <File Name="Generated_Code/PE_Types.h" FileDate="2021-03-22, 15:42:52" FileAge="1616398972635" FileType="45637" />
       <File Name="Generated_Code/archgetsetsaturationmode.asm" FileDate="2021-03-22, 16:03:31" FileAge="1616400211802" FileType="45637" />
-      <File Name="Sources/Events.c" FileDate="2021-05-31, 16:21:38" FileAge="1622449298622" FileType="131328" />
+      <File Name="Sources/Events.c" FileDate="2021-06-07, 14:11:15" FileAge="1623046275005" FileType="131328" />
       <File Name="Generated_Code/tfr16.h" FileDate="2021-03-22, 16:03:31" FileAge="1616400211761" FileType="45637" />
       <File Name="Generated_Code/IO_Map.h" FileDate="2021-03-22, 15:42:52" FileAge="1616398972635" FileType="45637" />
       <File Name="Generated_Code/QSCI0.h" FileDate="2021-05-17, 15:47:12" FileAge="1621237632953" FileType="45637" CompNumb="35" />
@@ -78,23 +78,23 @@
       <File Name="Generated_Code/FMSTR1.h" FileDate="2021-05-17, 15:47:12" FileAge="1621237632951" FileType="45637" CompNumb="34" />
       <File Name="Generated_Code/freemaster_serial.c" FileDate="2021-05-17, 16:14:21" FileAge="1621239261868" FileType="45637" CompNumb="34" />
       <File Name="Generated_Code/PE_Const.h" FileDate="2021-03-22, 15:42:52" FileAge="1616398972635" FileType="45637" />
-      <File Name="Generated_Code/TI2.c" FileDate="2021-05-31, 16:21:38" FileAge="1622449298571" FileType="45637" CompNumb="45" />
       <File Name="Generated_Code/freemaster_appcmd.c" FileDate="2021-05-17, 15:47:12" FileAge="1621237632919" FileType="45637" CompNumb="34" />
+      <File Name="Generated_Code/TI2.c" FileDate="2021-05-31, 16:21:38" FileAge="1622449298571" FileType="45637" CompNumb="45" />
       <File Name="Generated_Code/TI1.h" FileDate="2021-04-12, 16:51:20" FileAge="1618217480965" FileType="45637" CompNumb="8" />
       <File Name="Generated_Code/port.h" FileDate="2021-03-22, 16:03:31" FileAge="1616400211795" FileType="45637" />
       <File Name="Generated_Code/FMSTR1.c" FileDate="2021-05-17, 15:47:12" FileAge="1621237632949" FileType="45637" CompNumb="34" />
       <File Name="Generated_Code/AppConfig.h" FileDate="2021-03-22, 16:03:31" FileAge="1616400211763" FileType="45637" />
       <File Name="Generated_Code/TI1.c" FileDate="2021-04-12, 16:51:20" FileAge="1618217480985" FileType="45637" CompNumb="8" />
       <File Name="Generated_Code/prototype.h" FileDate="2021-03-22, 16:03:31" FileAge="1616400211793" FileType="45637" />
-      <File Name="Generated_Code/Bit2.h" FileDate="2021-03-22, 15:48:57" FileAge="1616399337413" FileType="45637" CompNumb="7" />
       <File Name="External_Modules/MSCAN.h" FileDate="2013-04-18, 00:55:42" FileAge="1366217742000" FileType="16384" />
+      <File Name="Generated_Code/Bit2.h" FileDate="2021-03-22, 15:48:57" FileAge="1616399337413" FileType="45637" CompNumb="7" />
       <File Name="Generated_Code/arch.h" FileDate="2021-03-22, 16:03:31" FileAge="1616400211797" FileType="45637" />
       <File Name="Sources/main.c" FileDate="2021-05-31, 16:21:38" FileAge="1622449298609" FileType="128" />
-      <File Name="Generated_Code/Bit2.c" FileDate="2021-03-22, 15:48:57" FileAge="1616399337418" FileType="45637" CompNumb="7" />
       <File Name="External_Modules/MSCAN.c" FileDate="2013-04-18, 00:55:42" FileAge="1366217742000" FileType="16384" />
-      <File Name="Generated_Code/Bit1.h" FileDate="2021-03-27, 19:12:08" FileAge="1616843528574" FileType="45637" CompNumb="6" />
+      <File Name="Generated_Code/Bit2.c" FileDate="2021-03-22, 15:48:57" FileAge="1616399337418" FileType="45637" CompNumb="7" />
       <File Name="Documentation/doxygen/pex.css" FileDate="2021-03-22, 15:42:52" FileAge="1616398972463" FileType="16384" CompNumb="2" />
+      <File Name="Generated_Code/Bit1.h" FileDate="2021-03-27, 19:12:08" FileAge="1616843528574" FileType="45637" CompNumb="6" />
     </GeneratedByPE>
   </GeneratedFilesList>
-  <CodeGenReference>58</CodeGenReference>
+  <CodeGenReference>59</CodeGenReference>
 </CodeGenerationInfo>
